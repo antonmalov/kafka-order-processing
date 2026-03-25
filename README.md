@@ -43,13 +43,13 @@ git clone https://github.com/antonmalov/kafka-order-common-dto.git
 cd kafka-order-common-dto
 mvn clean install
 
-# Клонируем и собираем продюсера
+# Клонируем и собираем продюсер
 cd ..
 git clone https://github.com/antonmalov/kafka-order-producer.git
 cd kafka-order-producer
 mvn clean package
 
-# Клонируем и собираем консьюмера
+# Клонируем и собираем консьюмер
 cd ..
 git clone https://github.com/antonmalov/kafka-order-consumer.git
 cd kafka-order-consumer
