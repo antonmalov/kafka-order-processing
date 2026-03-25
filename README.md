@@ -1,6 +1,6 @@
 # Kafka Order Processing
 
-[![GitHub](https://img.shields.io/badge/Java-21-blue)](https://www.java.com/)
+[![Java](https://img.shields.io/badge/Java-21-blue)](https://www.java.com/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.4-green)](https://spring.io/projects/spring-boot)
 [![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-4.1.2-red)](https://kafka.apache.org/)
 [![Allure Report](https://img.shields.io/badge/Allure-Report-blue)](https://github.com/antonmalov/kafka-order-e2e-tests#allure-report)
