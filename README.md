@@ -3,6 +3,7 @@
 [![Java](https://img.shields.io/badge/Java-21-blue)](https://www.java.com/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.4-green)](https://spring.io/projects/spring-boot)
 [![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-4.1.2-red)](https://kafka.apache.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)](https://www.postgresql.org/)
 [![Allure Report](https://img.shields.io/badge/Allure-Report-blue)](https://github.com/antonmalov/kafka-order-e2e-tests#allure-report)
 
 Проект демонстрирует асинхронную обработку заказов с использованием Apache Kafka.
@@ -10,17 +11,22 @@
 ## Архитектура
 
 ```
-┌─────────────┐     ┌─────────┐     ┌─────────────┐     ┌─────────────┐
-│   Client    │ ──► │Producer │ ──► │   Kafka     │ ──► │  Consumer   │
-│  (REST)     │     │(8081)   │     │(orders-v2)  │     │  (8080)     │
-└─────────────┘     └─────────┘     └─────────────┘     └─────────────┘
-                                           │
-                                           ▼
-                                     ┌─────────────┐
-                                     │     DLT     │
-                                     │(orders-v2.  │
-                                     │    DLT)    │
-                                     └─────────────┘
+┌─────────────┐ ┌─────────┐ ┌─────────────┐ ┌─────────────┐
+│ Client │ ──► │Producer │ ──► │ Kafka │ ──► │ Consumer │
+│ (REST) │ │(8081) │ │(orders-v2) │ │ (8080) │
+└─────────────┘ └─────────┘ └─────────────┘ └─────────────┘
+│ │
+│ ▼
+│ ┌─────────────┐
+│ │ PostgreSQL │
+│ │ (orders) │
+│ └─────────────┘
+▼
+┌─────────────┐
+│ DLT │
+│(orders-v2. │
+│ DLT) │
+└─────────────┘
 ```
 
 ## Архитектура
