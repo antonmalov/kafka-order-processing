@@ -10,11 +10,11 @@
 [![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=github-actions&logoColor=white)](https://github.com/features/actions)
 
 
-```
+
 [![Build Producer](https://github.com/antonmalov/kafka-order-producer/actions/workflows/docker-build.yml/badge.svg)](https://github.com/antonmalov/kafka-order-producer/actions/workflows/docker-build.yml)
 [![Build Consumer](https://github.com/antonmalov/kafka-order-consumer/actions/workflows/docker-build.yml/badge.svg)](https://github.com/antonmalov/kafka-order-consumer/actions/workflows/docker-build.yml)
 
-```
+
 
 Проект демонстрирует асинхронную обработку заказов с использованием Apache Kafka.
 
