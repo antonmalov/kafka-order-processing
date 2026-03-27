@@ -5,6 +5,9 @@
 [![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-4.1.2-red)](https://kafka.apache.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)](https://www.postgresql.org/)
 [![Allure Report](https://img.shields.io/badge/Allure-Report-blue)](https://github.com/antonmalov/kafka-order-e2e-tests#allure-report)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white)](https://kubernetes.io/)
+[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=github-actions&logoColor=white)](https://github.com/features/actions)
 
 Проект демонстрирует асинхронную обработку заказов с использованием Apache Kafka.
 
@@ -29,7 +32,40 @@
 └─────────────┘
 ```
 
-## Архитектура
+## Docker
+
+Каждый микросервис (`order-service`, `notification-service`) содержит `Dockerfile`. Образы собираются и публикуются на Docker Hub автоматически через GitHub Actions при пуше в ветку `main`.
+```bash
+
+docker build -t your-username/order-service:latest .
+docker build -t your-username/notification-service:latest .
+
+Чтобы собрать образ вручную:
+
+docker build -t anton230230/order-service:latest .
+docker build -t anton230230/notification-service:latest .
+
+```
+
+
+
+## Kubernetes
+
+Для развёртывания в Kubernetes подготовлены манифесты в папке `k8s`. Они включают:
+
+- Namespace `order-processing`
+- PostgreSQL (Deployment и Service)
+- Order Service (Deployment и Service)
+- Notification Service (Deployment и Service)
+
+Чтобы развернуть все компоненты в кластере:
+
+```bash
+
+kubectl apply -f k8s/
+
+```
+
 
 
 ## Репозитории
