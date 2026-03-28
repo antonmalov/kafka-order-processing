@@ -91,7 +91,13 @@ kubectl apply -f k8s/
 
 ### 1. Запустить инфраструктуру
 
+```bash
+
+git clone https://github.com/antonmalov/kafka-order-e2e-tests.git
+cd kafka-order-e2e-tests
 docker-compose up -d
+
+```
 
 ### 2. Клонировать и собрать сервисы
 
