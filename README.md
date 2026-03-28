@@ -13,6 +13,7 @@
 
 [![Build Producer](https://github.com/antonmalov/kafka-order-producer/actions/workflows/docker-build.yml/badge.svg)](https://github.com/antonmalov/kafka-order-producer/actions/workflows/docker-build.yml)
 [![Build Consumer](https://github.com/antonmalov/kafka-order-consumer/actions/workflows/docker-build.yml/badge.svg)](https://github.com/antonmalov/kafka-order-consumer/actions/workflows/docker-build.yml)
+[![E2E Tests](https://github.com/antonmalov/kafka-order-e2e-tests/actions/workflows/e2e-tests.yml/badge.svg)](https://github.com/antonmalov/kafka-order-e2e-tests/actions/workflows/e2e-tests.yml)
 
 
 
@@ -85,6 +86,8 @@ kubectl apply -f k8s/
 | **e2e-tests** | E2E тесты с Allure-отчётами | [kafka-order-e2e-tests](https://github.com/antonmalov/kafka-order-e2e-tests) |
 
 ## Быстрый старт
+
+> **Примечание:** E2E-тесты автоматически запускаются в GitHub Actions при каждом изменении в репозитории тестов. Локально они запускаются скриптом `run-tests.bat` как и раньше.
 
 ### 1. Запустить инфраструктуру
 
