@@ -4,6 +4,7 @@
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.4-green)](https://spring.io/projects/spring-boot)
 [![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-4.1.2-red)](https://kafka.apache.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)](https://www.postgresql.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![Allure Report](https://img.shields.io/badge/Allure-Report-blue)](https://github.com/antonmalov/kafka-order-e2e-tests#allure-report)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white)](https://kubernetes.io/)
@@ -30,6 +31,11 @@
 │ ▼
 │ ┌─────────────┐
 │ │ PostgreSQL │
+│ │ (orders) │
+│ └─────────────┘
+│ ▼
+│ ┌─────────────┐
+│ │ MongoDB │
 │ │ (orders) │
 │ └─────────────┘
 ▼
